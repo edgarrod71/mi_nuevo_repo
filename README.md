@@ -8,3 +8,7 @@
 - `funcionalidad A:` Intentando describir para qué carajos hago esta mondá 
 
 > si quieres [buscar en Google](https://www.google.com/) puedes hacer click
+
+para ejecutar el ssitema debes poner:
+```npm install react```
+
