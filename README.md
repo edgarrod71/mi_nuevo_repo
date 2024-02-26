@@ -15,6 +15,5 @@ para ejecutar el sistema debes poner:
 -- Intentando agregar algo más
 
 > probando otra cosa
-
 probamos nuevas cosas al ver esas películas
 
