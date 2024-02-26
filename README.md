@@ -17,3 +17,6 @@ para ejecutar el sistema debes poner:
 > probando otra cosa
 probamos nuevas cosas al ver esas películas
 
+hay que preparar algo de comer, y buscar el cable y comprar otro probador, no olvides los huevos
+
+así como también otras cosas de comer como arroz
