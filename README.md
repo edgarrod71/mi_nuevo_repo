@@ -9,7 +9,7 @@
 
 > si quieres [buscar en Google](https://www.google.com/) puedes hacer click
 
-para ejecutar el ssitema debes poner:
+para ejecutar el sistema debes poner:
 ```npm install react```
 
 -- Intentando agregar algo más
