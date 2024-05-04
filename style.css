@@ -15,20 +15,27 @@ html {
     --margen-ambos: 90px;
 }
 
+header img {
+    float: left;
+    width: 24px;
+}
+
 body {
     background: #f5f5f5;
     display: grid;
     grid-template-areas: 
-        "header"
-        "main"
-        "footer";
+        "header header"
+        "main main"
+        "footer footer";
     grid-gap: 5px;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
 }
 
 body section {
-    margin: 20px 0 10px 0;
+    margin: 20px var(--margen-ambos);
+    padding: 40px auto;
+    width: 900px;
 }
 
 section h2 {
@@ -42,12 +49,8 @@ header {
     display: flex;
     justify-content:space-between;
     align-items: center;
-    margin: 0 var(--margen-ambos);
-}
-
-header img {
-    float: left;
-    width: 24px;
+    padding: 0 10px;
+    width: 100%;
 }
 
 header div {
@@ -90,7 +93,6 @@ nav li:hover {
 
 .uno {
     display: flex;
-    margin: 0 var(--margen-ambos);
 }
 
 .uno img {
@@ -109,7 +111,7 @@ nav li:hover {
 
 .uno div p {
     font-weight: 400;
-        line-height: 1.5;
+    line-height: 1.5;
 }
 
 .uno div div {
@@ -140,16 +142,13 @@ a {
 }
 
 .dos div h2 {
-    padding: 0 var(--margen-ambos);
     text-align: left;
 }
 
 .dos p {
     font-weight: 300;
-    padding: 
-        5px var(--lado-imagen) 
-        0 var(--margen-ambos);
     line-height: 1.5;
+    padding-bottom: 20px;
 }
 
 .dos img {
@@ -164,8 +163,7 @@ a {
 }
 
 .tres, .cuatro {
-    padding-top: 10px;
-    margin: 0 0 100px 0;
+    margin: 30px auto;
 }
 
 .tres ul, .cuatro ul {
@@ -176,7 +174,7 @@ a {
     font-size: 0.8em;
     color: #555;
     margin: 10px auto;
-    width: 900px;
+    width: 800px;
 }
 
 .tres li, .cuatro li {
@@ -194,6 +192,7 @@ a {
 }
 
 .cinco h2, .siete h2 {
+    padding-top: 30px;
     margin-top: 30px;
 }
 
@@ -236,6 +235,7 @@ h4 {
 .seis {
     display: grid;
     justify-items: center;
+
 }
 
 .seis h2 {
@@ -332,8 +332,8 @@ form div input {
 }
 
 input:focus,
-input:valid,
-textarea: focus,
+input:valid
+textarea:focus,
 textarea:valid {
     outline: 0;
     border-bottom-color: green;
@@ -368,4 +368,140 @@ textarea {
     overflow-x: hidden;
     border-radius: 6px;
     padding: 4px;
+}
+
+@media screen and (max-width: 768px) {
+
+    :root {
+        --lado-imagen: 180px;
+        --margen-ambos: 10px;
+    }
+
+    body {
+        color: red;
+    }
+    
+     header img {
+         width: 40px;
+     }
+    
+    nav li {
+        visibility: hidden;
+    }
+
+    [href="#contacto"] {
+        visibility: visible
+    }
+
+    .tres ul, .cuatro ul {
+        width: 700px;
+    }
+    
+    .tres li, .cuatro li {
+        height: 100px;
+        width: 80px;
+    }
+    
+    .seis section {
+        display: block;
+    }
+
+    .seis section img {
+        width: 100%;
+        height: 440px;
+        padding-left: 0
+    }
+
+    .info {
+        margin: 20px;
+    }
+
+    .demoBtn, .repoBtn, input[type=submit] {
+        padding: 0.9em 1.9em;
+    }
+
+    .siete img {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+
+    * {
+        border: 2px dotted green;
+    }
+    
+    body {
+        color: green;
+    }
+
+    body section {
+        width: 500px;
+        padding: 0 20px;
+    }
+
+    header {
+        width: 550px;
+    }
+
+    header nav {
+        width: 200px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    
+    .uno {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .dos, .uno div, .dos div {
+        width: 530px;
+    }
+
+    .tres ul, .cuatro ul {
+     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    justify-items: stretch;
+        height: 800px;
+        width: 500px;
+    }
+    .tres li, .cuatro li {
+        width: 180px;
+        height: 170px;
+    }
+
+    .cuatro ul {
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .cinco ul {
+        width: 500px;
+        height: 600px;
+        display: grid;
+        grid-auto-flow: row;
+    }
+    
+    .cinco li div {
+        visibility: hidden;
+    }
+
+    .cinco li {
+        margin-bottom: 40px;
+    }
+    
+    .cinco img, .cinco h3, .cinco h4 {
+        visibility: visible;
+    }
+    
+    .seis section img {
+        width: 100%;
+        height: 220px;
+    }
+    
+    .siete {
+        width: 480px;
+    }
 }
