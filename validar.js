@@ -1,3 +1,15 @@
+function limpiaErrores() {
+    var errorNombre = document.getElementById("error-nombre");
+    var errorEmail = document.getElementById("error-email");
+    var errorAsunto = document.getElementById("error-asunto");
+    var errorMensaje = document.getElementById("error-message");
+
+    errorNombre.textContent = "";
+    errorEmail.textContent = "";
+    errorAsunto.textContent = "";
+    errorMensaje.textContent = "";
+}
+
 function validarFormulario() {
     var nombre = document.getElementById("first_name").value;
     var errorNombre = document.getElementById("error-nombre");
@@ -8,7 +20,7 @@ function validarFormulario() {
     var mensaje = document.getElementById("message").value;
     var errorMensaje = document.getElementById("error-message");
 
- 
+    limpiaErrores(); 
     var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (nombre.trim() === "") {
@@ -49,14 +61,9 @@ function validarFormulario() {
     if (mensaje.length > 300) {
         errorMensaje.textContent = "";
         return false;
-    } else
+    }
 
- 
- 
-    errorNombre.textContent = "";
-    errorEmail.textContent = "";
-    errorAsunto.textContent = "";
-    errorMensaje.textContent = "";
+    limpiaErrores();
  
     return true;
 }
