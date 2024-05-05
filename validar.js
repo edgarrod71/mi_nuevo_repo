@@ -21,6 +21,16 @@ function validarFormulario() {
         return false;
     } else
 
+    if (email.trim() === "") {
+        errorEmail.textContent = "El Correo no debe estar en blanco ni vacío.";
+        return false;
+    } else
+ 
+    if (!regex.test(email)) {
+        errorEmail.textContent = "El correo electrónico no es válido.";
+        return false;
+    } else
+ 
     if (mensaje.trim() === "") {
         errorMensaje.textContent = "El Mensaje no debe estar en blanco ni vacío.";
         return false;
@@ -41,16 +51,8 @@ function validarFormulario() {
         return false;
     } else
 
-    if (email.trim() === "") {
-        errorEmail.textContent = "El Correo no debe estar en blanco ni vacío.";
-        return false;
-    }
-  
-    if (!regex.test(email)) {
-        errorEmail.textContent = "El correo electrónico no es válido.";
-        return false;
-    }
-  
+ 
+ 
     errorNombre.textContent = "";
     errorEmail.textContent = "";
     errorAsunto.textContent = "";
