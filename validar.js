@@ -7,6 +7,11 @@ function validarFormulario() {
     var errorAsunto = document.getElementById("error-asunto");
     var mensaje = document.getElementById("message").value;
     var errorMensaje = document.getElementById("error-message");
+
+    errorNombre.textContent = "";
+    errorEmail.textContent = "";
+    errorAsunto.textContent = "";
+    errorMensaje.textContent = "";
   
     var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -50,11 +55,7 @@ function validarFormulario() {
         return false;
     }
   
-    errorNombre.textContent = "";
-    errorEmail.textContent = "";
-    errorAsunto.textContent = "";
-    errorMensaje.textContent = "";
-  
+ 
     return true;
 }
 
