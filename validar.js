@@ -73,3 +73,6 @@ document.getElementById("email").addEventListener("blur", validarFormulario);
 document.getElementById("message").addEventListener("blur", validarFormulario);
 document.getElementById("subject").addEventListener("blur", validarFormulario);
 
+function abrirPDF() {
+  window.open("MiNuevoRepositorio.pdf", "_blank");
+}
