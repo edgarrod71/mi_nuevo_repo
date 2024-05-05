@@ -46,7 +46,7 @@ function validarFormulario() {
     if (mensaje.trim() === "") {
         errorMensaje.textContent = "El Mensaje no debe estar en blanco ni vacío.";
         return false;
-    }
+    } else
   
     if (nombre.length > 50) {
         errorNombre.textContent = "El Nombre debe tener máximo 50 caracteres.";
