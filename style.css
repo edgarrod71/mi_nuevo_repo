@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.errorcito {
+    color: red;
+    font-size: 15px;
 }
 
 html {

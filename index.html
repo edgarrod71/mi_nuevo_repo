@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -101,7 +101,7 @@
             <h2>Contáctame</h2>
             <div class="correo">
                 <img src="img/correo.png" alt="">
-                   <form action="https://api.web3forms.com/submit" method="POST">
+                   <form action="https://api.web3forms.com/submit" method="POST" onsubmit="return validarFormulario()">
                     <div>
                         <h3>¿Deseas ponerte en contacto?</h3>
                         <h4>Ingresa los siguientes datos y me pondré en contacto lo más pronto posible para ayudar en lo que desees que haga.</h4>
@@ -112,18 +112,22 @@
                     <div>
                         <input type="text"  name="Cliente" id="first_name" required>
                         <label for="first_name">¿Cómo te llamas?</label>
+                        <span id="error-nombre" class="errorcito"></span>
                     </div>
                     <div>
                         <input type="text"  name="subject" id="subject" required>
                         <label for="subject">¿De qué me quieres hablar?</label>
+                        <span id="error-asunto" class="errorcito"></span>
                     </div>
                     <div>
                         <input type="email"  name="email" id="email" required>
                         <label for="email">Escríbeme tu dirección de email</label>
+                        <span id="error-email" class="errorcito"></span>
                     </div>
                     <div>
                         <textarea id="message" name="mensaje" placeholder="" required></textarea>
                         <label for="message">Dame en cortas palabras tu idea.</label>
+                        <span id="error-message" class="errorcito"></span>
                     </div>
                     <input type="submit" value="Enviar Mensaje">
                 </form>
@@ -134,5 +138,6 @@
     <footer>Desarrollado por Edgar Fernando usando Vim y Opera 100% a mano (no WordPress ni Figma)<br />2024
     </footer>
     <script src="script.js"></script>
+    <script src="validar.js"></script>
 </body>
 </html>
